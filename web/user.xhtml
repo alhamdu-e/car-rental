@@ -16,7 +16,7 @@
               left: 515px;
               top: 5px;
                border-radius: 100px;
-           }
+               }
             .head1{
                 position: fixed;
                 left: 580px;
@@ -29,8 +29,7 @@
                  width: 1300px;
                 background-color:#0E185F;
                  height: 70px;
-                 
-               }
+                }
               .b1{
                position: fixed;
                right: 30px;
@@ -42,8 +41,89 @@
                border-radius:10px;
                border-color: white;
                color: white;
-                
+                 }
+               .t{
+                   position: fixed;
+                   top:100px;
+                   left: 700px;
+                    }
+                    .t7{
+                   position: fixed;
+                   top:150px;
+                   left: 700px;
+                  }
+               .t1{
+                   position: fixed;
+                   top:200px;
+                   left: 700px;
+                   
                }
+                .t3{
+                   position: fixed;
+                   top:250px;
+                   left: 700px;
+                   }
+                .t4{
+                   position: fixed;
+                   top:300px;
+                   left: 700px;
+                   }
+               
+                 .la{
+                   position: fixed;
+                   top:100px;
+                   left:  650px;
+                   font-size: 1.2rem;
+                 color: white;
+               }
+               .la7{
+                   position: fixed;
+                   top:150px;
+                   left: 623px;
+                   font-size: 1.2rem;
+                 color: white;
+               }
+               .la1{
+                   position: fixed;
+                   top:200px;
+                   left:  640px;
+                   font-size: 1.2rem;
+                   color: white;
+                    }
+                 .la3{
+                   position: fixed;
+                   top:250px;
+                   left:  640px;
+                   color: white;
+                   font-size: 1.2rem;
+                 }
+                  .la4{
+                   position: fixed;
+                   top:300px;
+                   left:  640px;
+                   color: white;
+                   font-size: 1.2rem;
+                 }
+                 .hhh{
+                   position: fixed;
+                   top: 85px;
+                   left: 580px;
+                     background-color: #0A2647;
+                    opacity: 0.5;
+                   width: 350px;
+                   height: 400px;
+                  border-radius: 100px;
+               } 
+                .btn{
+                   position: fixed;
+                   top:400px;
+                   left: 720px;
+                  border-radius:10px;
+               border-color: white;
+                font-size: 1.2rem;
+                 padding: 5px;
+                  }
+             
         </style>
     </h:head>
     <h:body>
@@ -52,9 +132,23 @@
                 <h1 class="head1">Car Rental</h1>
                 <img class="log2" src="Resource/images/all.jpg" alt="alt"/>
             </div>
-            </h:form>
-             <h:link  class="b1" value="Log Out" outcome="index.xhtml"> </h:link>
+            <div class="hhh">
+            
+                    </div>
+             <label class="la">Name</label>
+              <h:inputText class="t" required="true" ></h:inputText>
+                <label class="la1">Mobile</label>
+                <h:inputText class="t1" ></h:inputText>
 
+               <label class="la7">USERID</label>
+              <h:inputText class="t7" required="true"></h:inputText>
+                <label class="la3">Email</label>
+              <h:inputText class="t3" required="true" ></h:inputText>
+              <label class="la4">Car ID</label>
+              <h:inputText class="t4" required="true" ></h:inputText>
+             <h:commandButton class="btn" value="Rent Car" > </h:commandButton>
+             <h:link  class="b1" value="Log Out" outcome="index.xhtml"> </h:link>
+             </h:form>
     </h:body>
 </html>
 
