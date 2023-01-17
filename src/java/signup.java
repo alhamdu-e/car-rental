@@ -19,6 +19,8 @@ public class signup {
     private String adress;
     private String ccard;
     private String pass;
+    private String userid;
+
      private String geneder;
      List<String> genderList;
     
@@ -43,6 +45,14 @@ public class signup {
          genderList.add("Male");
         genderList.add("Female");
 
+    }
+
+    public String getUserid() {
+        return userid;
+    }
+
+    public void setUserid(String userid) {
+        this.userid = userid;
     }
     
     public String getName() {
@@ -99,7 +109,7 @@ public class signup {
             signup s=new signup();
             DBconnecter db=new DBconnecter();
              Connection connection = db.conMethod();
-        PreparedStatement stmt=connection.prepareStatement("Insert into USERTEBLE(name,email,phone,geneder,adress,ccard,pass) values (?,?,?,?,?,?,?)");     
+        PreparedStatement stmt=connection.prepareStatement("Insert into USERTEBLE(name,email,phone,geneder,adress,ccard,pass,USER_ID) values (?,?,?,?,?,?,?,?)");     
         stmt.setString(1,name);  
         stmt.setString(2,email);  
         stmt.setString(3,phone);  
@@ -107,6 +117,8 @@ public class signup {
         stmt.setString(5,adress); 
          stmt.setString(6,ccard); 
          stmt.setString(7,pass);  
+         stmt.setString(8,userid);  
+
 
        stmt.executeUpdate();  
         }

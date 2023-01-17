@@ -39,7 +39,7 @@
                      background-color: #0A2647;
                     opacity: 0.5;
                    width: 350px;
-                   height: 480px;
+                   height: 500px;
                   border-radius: 50px;
                }
               
@@ -94,7 +94,7 @@
                }
                .la5{
                    position: fixed;
-                   top:400px;
+                   top:450px;
                    left: 560px;
                     font-size: 1.2rem;
                  color: white;
@@ -104,8 +104,17 @@
                
                .la6{
                    position: fixed;
-                   top:450px;
+                   top:500px;
                    left: 540px;
+                   font-size: 1.2rem;
+                 color: white;
+
+                   
+               }
+               .la7{
+                   position: fixed;
+                   top:400px;
+                   left: 560px;
                    font-size: 1.2rem;
                  color: white;
 
@@ -142,21 +151,27 @@
                    left: 650px;
                    
                }
-               .pass{
+               .t7{
                    position: fixed;
                    top:400px;
                    left: 650px;
                    
                }
-                 .con{
+               .pass{
                    position: fixed;
                    top:450px;
+                   left: 650px;
+                   
+               }
+                 .con{
+                   position: fixed;
+                   top:500px;
                    left: 650px;
                   
                  }
                   .b{
                    position: fixed;
-                   top:510px;
+                   top:530px;
                    left: 670px;
                   border-radius:10px;
                border-color: white;
@@ -212,6 +227,8 @@
              <h:inputText class="t2" value="#{signup.adress}"></h:inputText>
               <label class="la3">Email</label>
               <h:inputText class="t3" required="true" value="#{signup.email}"></h:inputText>
+               <label class="la7">USERID</label>
+              <h:inputText class="t7" required="true" value="#{signup.userid}"></h:inputText>
               <label class="la4">C-Card NO</label>
               <h:inputText class="date" value="#{signup.ccard}"></h:inputText>
               <label class="la5">Password:</label>
