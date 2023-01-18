@@ -136,17 +136,17 @@
             
                     </div>
              <label class="la">Name</label>
-              <h:inputText class="t" required="true" ></h:inputText>
+              <h:inputText class="t" required="true" value="#{rental.name}" ></h:inputText>
                 <label class="la1">Mobile</label>
-                <h:inputText class="t1" ></h:inputText>
+                <h:inputText class="t1" value="#{rental.phone}"></h:inputText>
 
                <label class="la7">USERID</label>
-              <h:inputText class="t7" required="true"></h:inputText>
+              <h:inputText class="t7" required="true" value="#{rental.userid}"></h:inputText>
                 <label class="la3">Email</label>
-              <h:inputText class="t3" required="true" ></h:inputText>
+              <h:inputText class="t3" required="true" value="#{rental.email}"></h:inputText>
               <label class="la4">Car ID</label>
-              <h:inputText class="t4" required="true" ></h:inputText>
-             <h:commandButton class="btn" value="Rent Car" > </h:commandButton>
+              <h:inputText class="t4" required="true" value="#{rental.carid}" ></h:inputText>
+             <h:commandButton class="btn" value="Rent Car" action="#{rental.carrent}"> </h:commandButton>
              <h:link  class="b1" value="Log Out" outcome="index.xhtml"> </h:link>
              </h:form>
     </h:body>

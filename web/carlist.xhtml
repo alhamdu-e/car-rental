@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>carlist</title>
     <style>
@@ -44,6 +45,21 @@
                color: white;
                 
                }
+               
+               table {  
+border-collapse: collapse;  
+width: 70%;  
+}  
+th, td {  
+text-align:right;  
+padding: 8px;  
+}  
+  
+tr:nth-child(even){background-color: #f2f2f2}  
+th {  
+background-color: #4CAF50;  
+color: white;  
+}  
         </style>
     </h:head>
     <h:body>
@@ -54,6 +70,22 @@
             </div>
             </h:form>
              <h:link  class="b1" value="Log Out" outcome="index.xhtml"> </h:link>
+             <h2><h:outputText value="Product List"></h:outputText></h2>  
+  <h:dataTable   class="cc" var="p" >  
+<h:column >  
+<f:facet name="header">Car id</f:facet>  
+<h:outputText />  
+</h:column>  
+<h:column> 
+<f:facet name="header">Car Model</f:facet>  
+</h:column>  
+<h:column>  
+<f:facet name="header"> Car Brand</f:facet>  
+</h:column>  
+ <h:column>  
+<f:facet name="header"> Car Price</f:facet>  
+</h:column> 
+</h:dataTable>
 
     </h:body>
 </html>

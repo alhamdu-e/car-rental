@@ -9,13 +9,13 @@ import javax.faces.bean.SessionScoped;
 @SessionScoped
 
 
-public class Crent {
+public class carreg {
     private String Cid;
     private String Cmodel;
     private String Cbrand;
     private String Cprice;
 
-    public Crent() {
+    public carreg() {
     }
 
     public String getCid() {
