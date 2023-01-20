@@ -46,20 +46,29 @@
                 
                }
                
-               table {  
+ table {  
 border-collapse: collapse;  
-width: 70%;  
+width: 70%;
 }  
-th, td {  
-text-align:right;  
+ td {  
+text-align:center;  
 padding: 8px;  
+color: black; 
+background-color: rgb(204,255,255);
+  border-style:  solid;
+   border-width: 1px;
+
 }  
-  
-tr:nth-child(even){background-color: #f2f2f2}  
+ 
 th {  
-background-color: #4CAF50;  
+background-color: #243763;  
 color: white;  
-}  
+  border-style:  solid;
+   border-width: 1px;
+   padding: 8px;  
+  
+    }  
+
         </style>
     </h:head>
     <h:body>
@@ -70,20 +79,25 @@ color: white;
             </div>
             </h:form>
              <h:link  class="b1" value="Log Out" outcome="index.xhtml"> </h:link>
-             <h2><h:outputText value="Product List"></h:outputText></h2>  
-  <h:dataTable   class="cc" var="p" >  
+              <h2><h:outputText value="Product List"></h:outputText></h2>  
+  <h:dataTable  value="#{carlistbean.list}"  var="c">  
 <h:column >  
-<f:facet name="header">Car id</f:facet>  
-<h:outputText />  
+    <f:facet name="header" class="vv">Car id</f:facet>  
+<h:outputText value="#{c.carid}"/>
 </h:column>  
 <h:column> 
 <f:facet name="header">Car Model</f:facet>  
+<h:outputText value="#{c.carmodel}"/>
+
 </h:column>  
 <h:column>  
 <f:facet name="header"> Car Brand</f:facet>  
+<h:outputText value="#{c.carbrand}"/>
 </h:column>  
  <h:column>  
 <f:facet name="header"> Car Price</f:facet>  
+<h:outputText value="#{c.carprice}"/>
+
 </h:column> 
 </h:dataTable>
 

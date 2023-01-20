@@ -12,9 +12,9 @@ import javax.faces.bean.RequestScoped;
   
 @ManagedBean
 @RequestScoped  
-public class carlistbean {
-public List<carlist>list;  
-public List<carlist>getlist(){
+public class  rentalinfobean{
+public List<rentalinfo>list;  
+public List<rentalinfo>getlist(){
     list=new ArrayList<>();
  
     try {
@@ -23,13 +23,18 @@ public List<carlist>getlist(){
         DBconnecter db=new DBconnecter();
         Connection connection = db.conMethod();
         st=connection.createStatement();
-        ResultSet rs=st.executeQuery("select * from CARLIST");
+        ResultSet rs=st.executeQuery("select * from RENTALINFO");
         while(rs.next()){
-        String CAR_ID=rs.getString("CAR_ID");
-        String CAR_MODEL=rs.getString("CAR_MODEL");
-        String CAR_BRAND=rs.getString("CAR_BRAND");
-        String CAR_PRICE=rs.getString("CAR_PRICE");
-      list.add(new carlist(CAR_ID,CAR_MODEL,CAR_BRAND,CAR_PRICE));
+        String NAME=rs.getString("NAME");
+        String USERID=rs.getString("USERID");
+        String PHONE=rs.getString("PHONE");
+        String EMAIL=rs.getString("EMAIL");
+        String CARID=rs.getString("CARID");
+       
+       
+
+
+      list.add(new rentalinfo(NAME,USERID,PHONE,EMAIL,CARID));
  }
         
     } catch (SQLException ex) {

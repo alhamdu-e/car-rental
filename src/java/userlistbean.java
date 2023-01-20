@@ -1,4 +1,3 @@
-
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,9 +11,9 @@ import javax.faces.bean.RequestScoped;
   
 @ManagedBean
 @RequestScoped  
-public class carlistbean {
-public List<carlist>list;  
-public List<carlist>getlist(){
+public class userlistbean {
+public List<userlist>list;  
+public List<userlist>getlist(){
     list=new ArrayList<>();
  
     try {
@@ -23,13 +22,22 @@ public List<carlist>getlist(){
         DBconnecter db=new DBconnecter();
         Connection connection = db.conMethod();
         st=connection.createStatement();
-        ResultSet rs=st.executeQuery("select * from CARLIST");
+        ResultSet rs=st.executeQuery("select * from USERTEBLE");
         while(rs.next()){
-        String CAR_ID=rs.getString("CAR_ID");
-        String CAR_MODEL=rs.getString("CAR_MODEL");
-        String CAR_BRAND=rs.getString("CAR_BRAND");
-        String CAR_PRICE=rs.getString("CAR_PRICE");
-      list.add(new carlist(CAR_ID,CAR_MODEL,CAR_BRAND,CAR_PRICE));
+        String NAME=rs.getString("NAME");
+        String EMAIL=rs.getString("EMAIL");
+        String PHONE=rs.getString("PHONE");
+        String GENDER=rs.getString("GENEDER");
+        String ADRESS=rs.getString("ADRESS");
+        String CCARD=rs.getString("CCARD");
+        String PASS=rs.getString("PASS");
+       String USERID=rs.getString("USER_ID");
+       
+        
+
+
+
+      list.add(new userlist(NAME,EMAIL,PHONE,GENDER,ADRESS,CCARD,PASS,USERID));
  }
         
     } catch (SQLException ex) {
