@@ -102,11 +102,11 @@ public class signup {
     public void setPass(String pass) {
         this.pass = pass;
     }
-     
+      
+  
 
  public void userregister() {
         try {
-            signup s=new signup();
             DBconnecter db=new DBconnecter();
              Connection connection = db.conMethod();
         PreparedStatement stmt=connection.prepareStatement("Insert into USERTEBLE(name,email,phone,geneder,adress,ccard,pass,USER_ID) values (?,?,?,?,?,?,?,?)");     
@@ -118,10 +118,15 @@ public class signup {
          stmt.setString(6,ccard); 
          stmt.setString(7,pass);  
          stmt.setString(8,userid);  
-
-
-       stmt.executeUpdate();  
+        stmt.executeUpdate();  
+        PreparedStatement st=connection.prepareStatement("Insert into LOGIN(USERNAME,PASSWORD,USERTYPE) values (?,?,?)");     
+        st.setString(1,userid);  
+        st.setString(2,pass);  
+        st.setString(3,"user");
+        st.executeUpdate(); 
         }
+       
+        
         catch (SQLException e) {
         }
     }

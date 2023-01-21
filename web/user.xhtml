@@ -1,7 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+            xmlns:f="http://xmlns.jcp.org/jsf/core">
+
     <h:head>
         <title>user</title>
    <style>
@@ -45,69 +47,69 @@
                .t{
                    position: fixed;
                    top:100px;
-                   left: 700px;
+                   left: 980px;
                     }
                     .t7{
                    position: fixed;
                    top:150px;
-                   left: 700px;
+                   left: 980px;
                   }
                .t1{
                    position: fixed;
                    top:200px;
-                   left: 700px;
+                   left: 980px;
                    
                }
                 .t3{
                    position: fixed;
                    top:250px;
-                   left: 700px;
+                   left: 980px;
                    }
                 .t4{
                    position: fixed;
                    top:300px;
-                   left: 700px;
+                   left: 980px;
                    }
                
                  .la{
                    position: fixed;
                    top:100px;
-                   left:  650px;
+                   left:  930px;
                    font-size: 1.2rem;
                  color: white;
                }
                .la7{
                    position: fixed;
                    top:150px;
-                   left: 623px;
+                   left: 903px;
                    font-size: 1.2rem;
                  color: white;
                }
                .la1{
                    position: fixed;
                    top:200px;
-                   left:  640px;
+                   left:  920px;
                    font-size: 1.2rem;
                    color: white;
                     }
                  .la3{
                    position: fixed;
                    top:250px;
-                   left:  640px;
+                   left:  920px;
                    color: white;
                    font-size: 1.2rem;
                  }
                   .la4{
                    position: fixed;
                    top:300px;
-                   left:  640px;
+                   left:  920px;
                    color: white;
                    font-size: 1.2rem;
                  }
                  .hhh{
                    position: fixed;
                    top: 85px;
-                   left: 580px;
+                   left: 860px;
                      background-color: #0A2647;
                     opacity: 0.5;
                    width: 350px;
@@ -117,12 +119,34 @@
                 .btn{
                    position: fixed;
                    top:400px;
-                   left: 720px;
+                   left: 1000px;
                   border-radius:10px;
                border-color: white;
                 font-size: 1.2rem;
                  padding: 5px;
                   }
+                   table {  
+border-collapse: collapse;  
+width: 60%;
+}  
+ td {  
+text-align:center;  
+padding: 8px;  
+color: black; 
+background-color: rgb(204,255,255);
+  border-style:  solid;
+   border-width: 1px;
+
+}  
+ 
+th {  
+background-color: #243763;  
+color: white;  
+  border-style:  solid;
+   border-width: 1px;
+   padding: 8px;  
+  
+    }
              
         </style>
     </h:head>
@@ -140,7 +164,7 @@
                 <label class="la1">Mobile</label>
                 <h:inputText class="t1" value="#{rental.phone}"></h:inputText>
 
-               <label class="la7">USERID</label>
+               <label class="la7">Userid</label>
               <h:inputText class="t7" required="true" value="#{rental.userid}"></h:inputText>
                 <label class="la3">Email</label>
               <h:inputText class="t3" required="true" value="#{rental.email}"></h:inputText>
@@ -148,6 +172,28 @@
               <h:inputText class="t4" required="true" value="#{rental.carid}" ></h:inputText>
              <h:commandButton class="btn" value="Rent Car" action="#{rental.carrent}"> </h:commandButton>
              <h:link  class="b1" value="Log Out" outcome="index.xhtml"> </h:link>
+                           <h2><h:outputText value="Product List"></h:outputText></h2>  
+  <h:dataTable  value="#{carlistbean.list}"  var="c">  
+<h:column >  
+    <f:facet name="header" class="vv">Car id</f:facet>  
+<h:outputText value="#{c.carid}"/>
+</h:column>  
+<h:column> 
+<f:facet name="header">Car Model</f:facet>  
+<h:outputText value="#{c.carmodel}"/>
+
+</h:column>  
+<h:column>  
+<f:facet name="header"> Car Brand</f:facet>  
+<h:outputText value="#{c.carbrand}"/>
+</h:column>  
+ <h:column>  
+<f:facet name="header"> Car Price</f:facet>  
+<h:outputText value="#{c.carprice}"/>
+
+</h:column> 
+</h:dataTable>
+
              </h:form>
     </h:body>
 </html>

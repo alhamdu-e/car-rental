@@ -3,6 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
+ 
     <h:head>
         <title>signup</title>
         <style>
@@ -221,26 +222,27 @@
              <h:inputText class="t" required="true" value="#{signup.name}"></h:inputText>
              <label class="la1">Mobile</label>
                
-             <h:inputText class="t1" value="#{signup.phone}"></h:inputText>
+             <h:inputText class="t1" value="#{signup.phone}">
+                 <f:validateLength maximum="10"></f:validateLength>
+             </h:inputText>
              <label class="la2">Adress</label>
              <h:inputText class="t2" value="#{signup.adress}"></h:inputText>
               <label class="la3">Email</label>
-              <h:inputText class="t3" required="true" value="#{signup.email}"></h:inputText>
+              <h:inputText class="t3" required="true" value="#{signup.email}">
+                  <f:validateRegex pattern="alhamdu7624@gmail.com"></f:validateRegex>
+              </h:inputText>
                <label class="la7">Username</label>
               <h:inputText class="t7" required="true" value="#{signup.userid}"></h:inputText>
               <label class="la4">C-Card NO</label>
               <h:inputText class="date" value="#{signup.ccard}"></h:inputText>
               <label class="la5">Password:</label>
-              <h:inputSecret class="pass" required="true" value="#{signup.pass}"> </h:inputSecret>
+              <h:inputSecret class="pass" id="password" required="true" value="#{signup.pass}"> </h:inputSecret>
              <label class="la6"> C-Password:</label>
-             <h:inputSecret class="con" required="true"> </h:inputSecret>
+             <h:inputSecret class="con" id="password2" required="true"> </h:inputSecret>
+            
              <h:commandButton class="b" value="Sign Up" action="#{signup.userregister}" > </h:commandButton>
-
              </h:form>
              
-
-             
-
     </h:body>
 </html>
 

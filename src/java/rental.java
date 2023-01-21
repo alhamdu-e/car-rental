@@ -1,6 +1,7 @@
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Statement;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
@@ -67,8 +68,10 @@ public class rental {
         stmt.setString(3,phone);  
         stmt.setString(4,email);  
         stmt.setString(5,carid);  
-
-        stmt.executeUpdate();  
+        stmt.executeUpdate(); 
+         String query = "DELETE FROM CARLIST WHERE CAR_ID='" + carid+ "'";
+            Statement statement = connection.createStatement();
+            statement.execute(query);
         }
         catch (SQLException e) {
         }
