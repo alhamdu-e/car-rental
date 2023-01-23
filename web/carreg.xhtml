@@ -100,7 +100,7 @@
                 .b{
                     position: fixed;
                     top: 380px;
-                   left:  670px;
+                   left:  625px;
                  border-width: 1px;
                border-radius:10px;
                border-color: white;
@@ -112,6 +112,20 @@
             background-color: #5F6F94;
              opacity: 0.7;
               }
+              .b2{
+                  position: fixed;
+                    top: 380px;
+                   left:  750px;
+                 border-width: 1px;
+               border-radius:10px;
+               border-color: white;
+                padding: 10px;
+ 
+              }
+              .b2:hover {
+         
+            background-color: #5F6F94;
+             opacity: 0.7;
                 .b1{
                position: fixed;
                right: 30px;
@@ -150,6 +164,7 @@
              <label class="la3">Car Price P.day</label>
              <h:inputText class="t3" value="#{carreg.cprice}"></h:inputText>
              <h:commandButton class="b" value="Register" action="#{carreg.carregister}"> </h:commandButton>
+              <h:commandButton class="b2" value="Cancel" type="reset"> </h:commandButton>
 
             </h:form>
     </h:body>

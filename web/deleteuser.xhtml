@@ -60,7 +60,7 @@
                 .b{
                     position: fixed;
                     top: 300px;
-                   left:  690px;
+                   left:  630px;
                  border-width: 1px;
                border-color: white;
                 padding: 10px;
@@ -68,7 +68,22 @@
 
 
                 }
+                .b2{
+                    position: fixed;
+                    top: 300px;
+                   left:  795px;
+                 border-width: 1px;
+               border-color: white;
+                padding: 10px;
+                border-radius:10px;
+                    
+                }
                  .b:hover {
+         
+            background-color: #5F6F94;
+             opacity: 0.7;
+              }
+              .b2:hover {
          
             background-color: #5F6F94;
              opacity: 0.7;
@@ -104,6 +119,8 @@
             <label class="la">User_ID</label>
             <h:inputText class="t" required="true" value="#{deletuser.userid}" ></h:inputText>
            <h:commandButton class="b" value="Delete User" action="#{deletuser.userdelete}"> </h:commandButton>
+             <h:commandButton class="b2" value="Cancel" type="reset"> </h:commandButton>
+
         </h:form>
     </h:body>
 </html>

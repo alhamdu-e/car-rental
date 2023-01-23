@@ -172,7 +172,16 @@
                   .b{
                    position: fixed;
                    top:530px;
-                   left: 670px;
+                   left: 650px;
+                  border-radius:10px;
+               border-color: white;
+                font-size: 1.2rem;
+                 padding: 5px;
+                  }
+                  .b2{
+                       position: fixed;
+                   top:530px;
+                   left: 770px;
                   border-radius:10px;
                border-color: white;
                 font-size: 1.2rem;
@@ -241,6 +250,8 @@
              <h:inputSecret class="con" id="password2" required="true"> </h:inputSecret>
             
              <h:commandButton class="b" value="Sign Up" action="#{signup.userregister}" > </h:commandButton>
+              <h:commandButton class="b2" value="Cancel" type="reset"> </h:commandButton>
+
              </h:form>
              
     </h:body>
