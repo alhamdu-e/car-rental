@@ -7,8 +7,7 @@
         <title>carlist</title>
     <style>
              body{
-                 background-image: url("Resource/images/nnn.jpg");
-                 background-size: 100%
+                
             }
              .log2{
                position: fixed;
@@ -67,7 +66,8 @@ color: white;
    border-width: 1px;
    padding: 8px;  
   
-    }  
+    } 
+    
 
         </style>
     </h:head>
@@ -80,6 +80,7 @@ color: white;
             </h:form>
              <h:link  class="b1" value="Log Out" outcome="index.xhtml"> </h:link>
              <h2><h:outputText value="Product List"></h:outputText></h2>  
+
   <h:dataTable  value="#{userlistbean.list}"  var="c">  
 <h:column >  
     <f:facet name="header" >Name</f:facet>  

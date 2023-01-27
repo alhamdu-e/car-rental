@@ -232,14 +232,11 @@
              <label class="la1">Mobile</label>
                
              <h:inputText class="t1" value="#{signup.phone}">
-                 <f:validateLength maximum="10"></f:validateLength>
              </h:inputText>
              <label class="la2">Adress</label>
              <h:inputText class="t2" value="#{signup.adress}"></h:inputText>
               <label class="la3">Email</label>
-              <h:inputText class="t3" required="true" value="#{signup.email}">
-                  <f:validateRegex pattern="alhamdu7624@gmail.com"></f:validateRegex>
-              </h:inputText>
+              <h:inputText class="t3" required="true" value="#{signup.email}"></h:inputText>
                <label class="la7">Username</label>
               <h:inputText class="t7" required="true" value="#{signup.userid}"></h:inputText>
               <label class="la4">C-Card NO</label>
