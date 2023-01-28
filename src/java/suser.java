@@ -9,16 +9,16 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
 
-@ManagedBean
+@ManagedBean(name="s")
 @SessionScoped
 public class suser {
-    private int userid;
+    private String userid;
 
-    public int getUserid() {
+    public String getUserid() {
         return userid;
     }
 
-    public void setUserid(int userid) {
+    public void setUserid(String userid) {
         this.userid = userid;
     }
 
@@ -40,8 +40,8 @@ public class suser {
            DBconnecter db=new DBconnecter();
              Connection connection = db.conMethod();
           
-             PreparedStatement ps = connection.prepareStatement("select * from USERTEBLE where USER_ID=?");
-               ps.setInt(1, userid);
+             PreparedStatement ps = connection.prepareStatement("select * from USERTEBLE WHERE USER_ID=?");
+               ps.setString(1, userid);
              ResultSet rs = ps.executeQuery();
           
                  while (rs.next()) {
@@ -55,9 +55,6 @@ public class suser {
               add.setCcard(rs.getString("CCARD"));
               add.setPass(rs.getString("PASS"));
 
-
-
-          
                 singleList.add(add);
             } 
              

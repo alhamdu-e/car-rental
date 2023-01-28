@@ -1,161 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      <link rel="stylesheet" type="text/css" href="update.css"></link>
+
     <h:head>
         <title>Facelet Title</title>
-   <style>
-             body{
-                 background-image: url("Resource/images/nnn.jpg");
-                 background-size: 100%
-            }
-             .log2{
-               position: fixed;
-               width: 60px;
-               height: 60px;
-              left: 515px;
-              top: 5px;
-               border-radius: 100px;
-           }
-            .head1{
-                position: fixed;
-                left: 580px;
-                color:white;
-            }
-             .head{
-                 position: fixed;
-                 top: 0;
-                 left: 0;
-                 width: 1300px;
-                background-color:#0E185F;
-                 height: 70px;
-               
-                 
-               }
-               .t{
-                   position: fixed;
-                   top:170px;
-                   left: 670px;
-                   
-               }
-               
-               .t1{
-                   position: fixed;
-                   top:210px;
-                   left: 670px;
-                   
-               } 
-               .t2{
-                   position: fixed;
-                   top:260px;
-                   left: 670px;
-               }
-                .t3{
-                   position: fixed;
-                   top:310px;
-                   left: 670px;
-               }
-                .la{
-                   position: fixed;
-                   top:170px;
-                   left:  540px;
-                   font-size: 1.2rem;
-                 color: white;
-               }
-               .la1{
-                   position: fixed;
-                   top:210px;
-                   left:  540px;
-                   font-size: 1.2rem;
-                   color: white;
-
-                   
-               }
-               .la2{
-                   position: fixed;
-                   top:260px;
-                   left:  540px;
-                    font-size: 1.2rem;
-                   color: white;
-           
-               }
-                .la3{
-                   position: fixed;
-                   top:310px;
-                   left:  540px;
-                    font-size: 1.2rem;
-                   color: white;
-           
-               }
-                    .nn{
-                    position: fixed;
-                    top: 150px;
-                    left: 520px;
-                    background-color: #0A2647;
-                    opacity: 0.5;
-                    width: 350px;
-                    height: 280px;
-                    border-radius: 50px;
-                }
-                .b{
-                    position: fixed;
-                    top: 380px;
-                   left:  625px;
-                 border-width: 1px;
-               border-radius:10px;
-               border-color: white;
-                padding: 10px;
-
-                }
-                 .b:hover {
-         
-            background-color: #5F6F94;
-             opacity: 0.7;
-              }
-              .b2{
-                  position: fixed;
-                    top: 380px;
-                   left:  750px;
-                 border-width: 1px;
-               border-radius:10px;
-               border-color: white;
-                padding: 10px;
- 
-              }
-              .b2:hover {
-         
-            background-color: #5F6F94;
-             opacity: 0.7;
-              }
-                .b1{
-               position: fixed;
-               right: 30px;
-               top: 15px;
-               padding: 10px;
-               text-decoration: none;
-               border-style:  solid;
-               border-width: 1px;
-               border-radius:10px;
-               border-color: white;
-               color: white;
-                
-                  }
-                   .b0{
-               position: fixed;
-               right: 30px;
-               top: 15px;
-               padding: 10px;
-               text-decoration: none;
-               border-style:  solid;
-               border-width: 1px;
-               border-radius:10px;
-               border-color: white;
-               color: white;
-                
-                  }
-                  
-             
-        </style>
+  
     </h:head>
     <h:body>
         <h:form>
@@ -176,9 +28,49 @@
              <label class="la2">Email</label>
              <h:inputText class="t2" value="#{update.email}"></h:inputText>
              <label class="la3">User id</label>
-             <h:inputText class="t3" value="#{update.uid}"></h:inputText>
+             <h:inputText class="t3" value="#{update.uid}" required="true"></h:inputText>
              <h:commandButton class="b" value="Update" action="#{update.updat}"> </h:commandButton>
               <h:commandButton class="b2" value="Cancel" type="reset"> </h:commandButton>
+              
+              <h2><h:outputText value="Product List"></h:outputText></h2>  
+
+  <h:dataTable  value="#{userlistbean.list}"  var="c">  
+<h:column >  
+    <f:facet name="header" >Name</f:facet>  
+<h:outputText value="#{c.name}"/>
+</h:column>  
+<h:column> 
+<f:facet name="header">Email</f:facet>  
+<h:outputText value="#{c.email}"/>
+
+</h:column>  
+<h:column>  
+<f:facet name="header">Phone</f:facet>  
+<h:outputText value="#{c.mobile}"/>
+</h:column>  
+ <h:column>  
+<f:facet name="header"> Gender</f:facet>  
+<h:outputText value="#{c.gender}"/>
+</h:column> 
+<h:column>  
+<f:facet name="header"> Address</f:facet>  
+<h:outputText value="#{c.adress}"/>
+</h:column> 
+ <h:column>  
+<f:facet name="header"> Card</f:facet>  
+<h:outputText value="#{c.ccard}"/>
+
+</h:column> 
+      <h:column>  
+<f:facet name="header">Password</f:facet>  
+<h:outputText value="#{c.pass}"/>
+</h:column> 
+  <h:column>  
+<f:facet name="header">Userid</f:facet>  
+<h:outputText value="#{c.userid}"/>
+</h:column> 
+</h:dataTable>
+
 
             </h:form>
     </h:body>

@@ -1,0 +1,137 @@
+             body{
+                 background-image: url("Resource/images/nnn.jpg");
+                 background-size: 100%
+            }
+             .log2{
+               position: fixed;
+               width: 60px;
+               height: 60px;
+              left: 515px;
+              top: 5px;
+               border-radius: 100px;
+           }
+            .head1{
+                position: fixed;
+                left: 580px;
+                color:white;
+            }
+             .head{
+                 position: fixed;
+                 top: 0;
+                 left: 0;
+                 width: 1300px;
+                background-color:#0E185F;
+                 height: 70px;
+               
+                 
+               }
+               .t{
+                   position: fixed;
+                   top:170px;
+                   left: 670px;
+                   
+               }
+               
+               .t1{
+                   position: fixed;
+                   top:210px;
+                   left: 670px;
+                   
+               } 
+               .t2{
+                   position: fixed;
+                   top:260px;
+                   left: 670px;
+               }
+                .t3{
+                   position: fixed;
+                   top:310px;
+                   left: 670px;
+               }
+                .la{
+                   position: fixed;
+                   top:170px;
+                   left:  540px;
+                   font-size: 1.2rem;
+                 color: white;
+               }
+               .la1{
+                   position: fixed;
+                   top:210px;
+                   left:  540px;
+                   font-size: 1.2rem;
+                   color: white;
+
+                   
+               }
+               .la2{
+                   position: fixed;
+                   top:260px;
+                   left:  540px;
+                    font-size: 1.2rem;
+                   color: white;
+           
+               }
+                .la3{
+                   position: fixed;
+                   top:310px;
+                   left:  540px;
+                    font-size: 1.2rem;
+                   color: white;
+           
+               }
+                    .nn{
+                    position: fixed;
+                    top: 150px;
+                    left: 520px;
+                    background-color: #0A2647;
+                    opacity: 0.5;
+                    width: 350px;
+                    height: 280px;
+                    border-radius: 50px;
+                }
+                .b{
+                    position: fixed;
+                    top: 380px;
+                   left:  625px;
+                 border-width: 1px;
+               border-radius:10px;
+               border-color: white;
+                padding: 10px;
+
+                }
+                 .b:hover {
+         
+            background-color: #5F6F94;
+             opacity: 0.7;
+              }
+              .b2{
+                  position: fixed;
+                    top: 380px;
+                   left:  750px;
+                 border-width: 1px;
+               border-radius:10px;
+               border-color: white;
+                padding: 10px;
+ 
+              }
+              .b2:hover {
+         
+            background-color: #5F6F94;
+             opacity: 0.7;
+              }
+                .b7{
+               position: fixed;
+               right: 30px;
+               top: 15px;
+               padding: 10px;
+               text-decoration: none;
+               border-style:  solid;
+               border-width: 1px;
+               border-radius:10px;
+               border-color: white;
+               color: white;
+                
+                  }
+                  
+             

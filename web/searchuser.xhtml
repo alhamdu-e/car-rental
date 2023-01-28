@@ -3,116 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-    <h:head>
-        <title>Facelet Title</title>
-        <style>
-         
-             .log2{
-               position: fixed;
-               width: 60px;
-               height: 60px;
-              left: 515px;
-              top: 5px;
-               border-radius: 100px;
-           }
-            .head1{
-                position: fixed;
-                left: 580px;
-                color:white;
-            }
-             .head{
-                 position: fixed;
-                 top: 0;
-                 left: 0;
-                 width: 1300px;
-                background-color:#0E185F;
-                 height: 70px;
-               
-                 
-               }
-                .b0{
-               position: fixed;
-               right: 30px;
-               top: 15px;
-               padding: 10px;
-               text-decoration: none;
-               border-style:  solid;
-               border-width: 1px;
-               border-radius:10px;
-               border-color: white;
-               color: white;
-                }
-                 .t{
-                   position: fixed;
-                   top:140px;
-                   left: 950px;
-                   
-               }
-                .la{
-                   position: fixed;
-                   top:140px;
-                   left:  860px;
-                   font-size: 1.2rem;
-                 color: white;
-               }
-               .b{
-                    position: fixed;
-                    top: 200px;
-                   left:  930px;
-                 border-width: 1px;
-               border-color: white;
-                padding: 10px;
-                border-radius:10px;
-
-
-                }
-                 .b2{
-                    position: fixed;
-                    top: 200px;
-                   left:  1095px;
-                 border-width: 1px;
-               border-color: white;
-                padding: 10px;
-                border-radius:10px;
-                    
-                }
-                 .aa{
-                  position: fixed;
-                  top:120px;
-                  left: 840px;
-                background-color: #0A2647;
-                    opacity: 0.5;
-                    width: 350px;
-                    height: 150px;
-                   border-radius:50px;
-
-                   
-            }
-                           
- table {  
-border-collapse: collapse;  
-width: 60%;
-}  
- td {  
-text-align:center;  
-padding: 8px;  
-color: black; 
-background-color: rgb(204,255,255);
-  border-style:  solid;
-   border-width: 1px;
-
-}  
- 
-th {  
-background-color: #243763;  
-color: white;  
-  border-style:  solid;
-   border-width: 1px;
-   padding: 8px;  
-  
-    } 
-            </style>
-    </h:head>
+       <link rel="stylesheet" type="text/css" href="searchuser.css"></link>
+       <h:head>
+        <title>Facelet Title</title>   
+</h:head>
     <h:body>
         <h:form>
          <div class="head">
@@ -124,11 +18,11 @@ color: white;
             </div>
                 <h:link  class="b0" value="Log Out" outcome="index.xhtml"> </h:link>
                  <label class="la">User ID</label>
-            <h:inputText class="t" required="true" value="#{suser.userid}"></h:inputText>
-           <h:commandButton class="b" value="Search user" action="#{suser.getsinglelist()}"> </h:commandButton>
+            <h:inputText class="t" required="true" value="#{s.userid}"></h:inputText>
+           <h:commandButton class="b" value="Search user" action="#{s.getsinglelist()}"> </h:commandButton>
            <h:commandButton class="b2" value="Cancel" type="reset"> </h:commandButton>
    <h2><h:outputText value="Product List"></h:outputText></h2>  
- <h:dataTable  value="#{suser.singlelist}"  var="c">  
+ <h:dataTable  value="#{s.singlelist}"  var="c">  
 <h:column >  
     <f:facet name="header" >Name</f:facet>  
 <h:outputText value="#{c.name}"/>
@@ -164,8 +58,7 @@ color: white;
 <h:outputText value="#{c.userid}"/>
 </h:column> 
 </h:dataTable>
-
-                         </h:form>
+  </h:form>
 
     </h:body>
 </html>
