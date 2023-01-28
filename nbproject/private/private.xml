@@ -2,6 +2,28 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/DAIC/Desktop/car_rental/web/rent%20list.xhtml</file>
+            <file>file:/C:/Users/DAIC/Desktop/car_rental/src/java/scar.java</file>
+            <file>file:/C:/Users/DAIC/Desktop/car_rental/web/deletecar.xhtml</file>
+            <file>file:/C:/Users/DAIC/Desktop/car_rental/src/java/userlist.java</file>
+            <file>file:/C:/Users/DAIC/Desktop/car_rental/src/java/carreg.java</file>
+            <file>file:/C:/Users/DAIC/Desktop/car_rental/web/searchecar.xhtml</file>
+            <file>file:/C:/Users/DAIC/Desktop/car_rental/src/java/carlistbean.java</file>
+            <file>file:/C:/Users/DAIC/Desktop/car_rental/web/user%20list.xhtml</file>
+            <file>file:/C:/Users/DAIC/Desktop/car_rental/src/java/rental.java</file>
+            <file>file:/C:/Users/DAIC/Desktop/car_rental/src/java/signup.java</file>
+            <file>file:/C:/Users/DAIC/Desktop/car_rental/web/deleteuser.xhtml</file>
+            <file>file:/C:/Users/DAIC/Desktop/car_rental/src/java/update.java</file>
+            <file>file:/C:/Users/DAIC/Desktop/car_rental/src/java/deletuser.java</file>
+            <file>file:/C:/Users/DAIC/Desktop/car_rental/src/java/login.java</file>
+            <file>file:/C:/Users/DAIC/Desktop/car_rental/src/java/rentalinfobean.java</file>
+            <file>file:/C:/Users/DAIC/Desktop/car_rental/web/signup.xhtml</file>
+            <file>file:/C:/Users/DAIC/Desktop/car_rental/src/java/userlistbean.java</file>
+            <file>file:/C:/Users/DAIC/Desktop/car_rental/web/index.xhtml</file>
+            <file>file:/C:/Users/DAIC/Desktop/car_rental/web/update.xhtml</file>
+            <file>file:/C:/Users/DAIC/Desktop/car_rental/web/admin.xhtml</file>
+            <file>file:/C:/Users/DAIC/Desktop/car_rental/web/carreg.xhtml</file>
+        </group>
     </open-files>
 </project-private>

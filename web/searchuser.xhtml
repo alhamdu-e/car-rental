@@ -88,9 +88,10 @@
 
                    
             }
-   table {  
+                           
+ table {  
 border-collapse: collapse;  
-width: 50%;
+width: 60%;
 }  
  td {  
 text-align:center;  
@@ -109,12 +110,12 @@ color: white;
    border-width: 1px;
    padding: 8px;  
   
-    }  
-        </style>
+    } 
+            </style>
     </h:head>
     <h:body>
         <h:form>
-       <div class="head">
+         <div class="head">
                 <h1 class="head1">Car Rental</h1>
                 <img class="log2" src="Resource/images/all.jpg" alt="alt"/>
             </div>
@@ -122,34 +123,50 @@ color: white;
                 
             </div>
                 <h:link  class="b0" value="Log Out" outcome="index.xhtml"> </h:link>
-                 <label class="la">Car ID</label>
-            <h:inputText class="t" required="true" value="#{scar.carid}"></h:inputText>
-           <h:commandButton class="b" value="Search Car" action="#{scar.getsinglelist()}"> </h:commandButton>
+                 <label class="la">User ID</label>
+            <h:inputText class="t" required="true" value="#{suser.userid}"></h:inputText>
+           <h:commandButton class="b" value="Search user" action="#{suser.getsinglelist()}"> </h:commandButton>
            <h:commandButton class="b2" value="Cancel" type="reset"> </h:commandButton>
-                         <h2><h:outputText value="Product List"></h:outputText></h2>  
-
-
- <h:dataTable  value="#{scar.singlelist}"  var="c">  
+   <h2><h:outputText value="Product List"></h:outputText></h2>  
+ <h:dataTable  value="#{suser.singlelist}"  var="c">  
 <h:column >  
-    <f:facet name="header" class="vv">Car id</f:facet>  
-<h:outputText value="#{c.cid}"/>
+    <f:facet name="header" >Name</f:facet>  
+<h:outputText value="#{c.name}"/>
 </h:column>  
 <h:column> 
-<f:facet name="header">Car Model</f:facet>  
-<h:outputText value="#{c.cmodel}"/>
+<f:facet name="header">Email</f:facet>  
+<h:outputText value="#{c.email}"/>
 
 </h:column>  
 <h:column>  
-<f:facet name="header"> Car Brand</f:facet>  
-<h:outputText value="#{c.cbrand}"/>
+<f:facet name="header">Phone</f:facet>  
+<h:outputText value="#{c.phone}"/>
 </h:column>  
  <h:column>  
-<f:facet name="header"> Car Price</f:facet>  
-<h:outputText value="#{c.cprice}"/>
+<f:facet name="header"> Gender</f:facet>  
+<h:outputText value="#{c.geneder}"/>
+</h:column> 
+<h:column>  
+<f:facet name="header"> Address</f:facet>  
+<h:outputText value="#{c.adress}"/>
+</h:column> 
+ <h:column>  
+<f:facet name="header"> Card</f:facet>  
+<h:outputText value="#{c.ccard}"/>
 
 </h:column> 
+      <h:column>  
+<f:facet name="header">Password</f:facet>  
+<h:outputText value="#{c.pass}"/>
+</h:column> 
+  <h:column>  
+<f:facet name="header">Userid</f:facet>  
+<h:outputText value="#{c.userid}"/>
+</h:column> 
 </h:dataTable>
-                </h:form>
+
+                         </h:form>
+
     </h:body>
 </html>
 
