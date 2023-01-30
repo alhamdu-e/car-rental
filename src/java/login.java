@@ -2,9 +2,12 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Map;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.ExternalContext;
+import javax.faces.context.FacesContext;
 @ManagedBean
 @SessionScoped
 public class login  {
@@ -33,10 +36,14 @@ public class login  {
         if (num) {
              DBconnecter db=new DBconnecter();
              Connection connection = db.conMethod();
-            PreparedStatement ps = connection.prepareStatement("select USERTYPE from LOGIN where USERNAME=?");
+            PreparedStatement ps = connection.prepareStatement("select USERTYPE,USERNAME from LOGIN where USERNAME=?");
             ps.setString(1, usern);       
             ResultSet rs = ps.executeQuery();
             rs.next();
+     FacesContext facesContext = FacesContext.getCurrentInstance();
+ ExternalContext externalContext = facesContext.getExternalContext();
+ Map<String, Object> sessionMap = externalContext.getSessionMap();
+ sessionMap.put("user", rs.getString(2));
             String userType =rs.getString(1);
             if ("admin".equals(userType)) {
                 return "admin";

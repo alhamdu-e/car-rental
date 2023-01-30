@@ -9,7 +9,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
 
-@ManagedBean(name="s")
+@ManagedBean
 @SessionScoped
 public class suser {
     private String userid;
@@ -24,17 +24,17 @@ public class suser {
 
     public suser() {
     }
-     public List<signup> getSingleList() {
-        return singleList;
+     public List<signup> getSinglelist() {
+        return singlelist;
     }
 
-    public void setSingleList(List<signup> singleList) {
-        this.singleList = singleList;
+    public void setSinglelist(List<signup> singlelist) {
+        this.singlelist = singlelist;
     }
 
-    public List <signup> singleList;
+    public List <signup> singlelist;
     public List <signup> getsinglelist(){
-    singleList = new ArrayList<>();
+    singlelist = new ArrayList<>();
     try{
         
            DBconnecter db=new DBconnecter();
@@ -54,8 +54,9 @@ public class suser {
               add.setAdress(rs.getString("ADRESS"));
               add.setCcard(rs.getString("CCARD"));
               add.setPass(rs.getString("PASS"));
+              
 
-                singleList.add(add);
+                singlelist.add(add);
             } 
              
     }catch( SQLException e)
@@ -64,7 +65,7 @@ public class suser {
     
     }
     
-    return singleList;
+    return singlelist;
     }
     
 }

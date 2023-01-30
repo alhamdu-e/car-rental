@@ -18,11 +18,11 @@
             </div>
                 <h:link  class="b0" value="Log Out" outcome="index.xhtml"> </h:link>
                  <label class="la">User ID</label>
-            <h:inputText class="t" required="true" value="#{s.userid}"></h:inputText>
-           <h:commandButton class="b" value="Search user" action="#{s.getsinglelist()}"> </h:commandButton>
+            <h:inputText class="t" required="true" value="#{suser.userid}"></h:inputText>
+           <h:commandButton class="b" value="Search user" action="#{suser.getsinglelist}"> </h:commandButton>
            <h:commandButton class="b2" value="Cancel" type="reset"> </h:commandButton>
    <h2><h:outputText value="Product List"></h:outputText></h2>  
- <h:dataTable  value="#{s.singlelist}"  var="c">  
+ <h:dataTable  value="#{suser.singlelist}"  var="c">  
 <h:column >  
     <f:facet name="header" >Name</f:facet>  
 <h:outputText value="#{c.name}"/>

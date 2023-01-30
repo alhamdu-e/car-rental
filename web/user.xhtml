@@ -3,12 +3,143 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
             xmlns:f="http://xmlns.jcp.org/jsf/core">
-            <link rel="stylesheet" type="text/css" href="user.css"></link>
 
 
     <h:head>
         <title>user</title>
-      
+        <style>
+                   body{
+                 background-image: url("Resource/images/nnn.jpg");
+                 background-size: 100%
+            }
+             .log2{
+               position: fixed;
+               width: 60px;
+               height: 60px;
+              left: 515px;
+              top: 5px;
+               border-radius: 100px;
+               }
+            .head1{
+                position: fixed;
+                left: 580px;
+                color:white;
+            }
+             .head{
+                 position: fixed;
+                 top: 0;
+                 left: 0;
+                 width: 1300px;
+                background-color:#0E185F;
+                 height: 70px;
+                }
+              .b1{
+               position: fixed;
+               right: 30px;
+               top: 15px;
+               padding: 10px;
+               text-decoration: none;
+               border-style:  solid;
+               border-width: 1px;
+               border-radius:10px;
+               border-color: white;
+               color: white;
+                 }
+               .t{
+                   position: fixed;
+                   top:130px;
+                   left: 980px;
+                    }
+                    
+               .t1{
+                   position: fixed;
+                   top:170px;
+                   left: 980px;
+                   
+               }
+                .t3{
+                   position: fixed;
+                   top:220px;
+                   left: 980px;
+                   }
+                .t4{
+                   position: fixed;
+                   top:270px;
+                   left: 980px;
+                   }
+               
+                 .la{
+                   position: fixed;
+                   top:130px;
+                   left:  930px;
+                   font-size: 1.2rem;
+                 color: white;
+               }
+               
+               .la1{
+                   position: fixed;
+                   top:170px;
+                   left:  920px;
+                   font-size: 1.2rem;
+                   color: white;
+                    }
+                 .la3{
+                   position: fixed;
+                   top:220px;
+                   left:  920px;
+                   color: white;
+                   font-size: 1.2rem;
+                 }
+                  .la4{
+                   position: fixed;
+                   top:270px;
+                   left:  920px;
+                   color: white;
+                   font-size: 1.2rem;
+                 }
+                 .hhh{
+                   position: fixed;
+                   top: 95px;
+                   left: 860px;
+                     background-color: #0A2647;
+                    opacity: 0.5;
+                   width: 350px;
+                   height: 400px;
+                  border-radius: 100px;
+               } 
+                .btn{
+                   position: fixed;
+                   top:350px;
+                   left: 1000px;
+                  border-radius:10px;
+               border-color: white;
+                font-size: 1.2rem;
+                 padding: 5px;
+                  }
+                   table {  
+border-collapse: collapse;  
+width: 60%;
+}  
+ td {  
+text-align:center;  
+padding: 8px;  
+color: black; 
+background-color: rgb(204,255,255);
+  border-style:  solid;
+   border-width: 1px;
+
+}  
+ 
+th {  
+background-color: #243763;  
+color: white;  
+  border-style:  solid;
+   border-width: 1px;
+   padding: 8px;  
+  
+    }
+       
+        </style>
     </h:head>
     <h:body>
         <h:form>
@@ -23,9 +154,6 @@
               <h:inputText class="t" required="true" value="#{rental.name}" ></h:inputText>
                 <label class="la1">Mobile</label>
                 <h:inputText class="t1" value="#{rental.phone}"></h:inputText>
-
-               <label class="la7">Userid</label>
-              <h:inputText class="t7" required="true" value="#{rental.userid}"></h:inputText>
                 <label class="la3">Email</label>
               <h:inputText class="t3" required="true" value="#{rental.email}"></h:inputText>
               <label class="la4">Car ID</label>
