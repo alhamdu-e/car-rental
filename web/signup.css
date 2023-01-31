@@ -24,7 +24,9 @@
                  height: 70px;
                  
                }
-               .hhh{
+               
+              
+                .hhh{
                    position: fixed;
                    top: 85px;
                    left: 530px;
@@ -34,8 +36,6 @@
                    height: 500px;
                   border-radius: 50px;
                }
-              
-                
                .la{
                    position: fixed;
                    top:100px;
